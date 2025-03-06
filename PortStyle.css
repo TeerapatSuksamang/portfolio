@@ -247,12 +247,30 @@ nav a.activity {
 /* ภาพ */
 .banner-me {
     width: 75vh;
+    height: 75vh;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
 
     animation: anim-me 3s;
     z-index: 1;
     transition: all 0.5s;
+
+    /* border: 5px solid red; */
+}
+
+.banner-me .img{
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    /* border: 5px solid green; */
 }
 
 /* รูปในแบนเนอร์ เมื่อวางเมาส์ */
@@ -480,6 +498,9 @@ nav a.activity {
 /* ขนาดจอ 1000px ซ่อนปุ่ม follow */
 @media only screen and (max-width: 1000px) {
     .follow-btn {
+        visibility: hidden;
+    }
+    .banner-me {
         visibility: hidden;
     }
 }
@@ -995,6 +1016,15 @@ button:focus::before {
     background-color: #1877F2;
     border: 8px solid #fff;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    position: absolute;
 }
 
 /* ลบ li style */
@@ -1099,7 +1129,7 @@ button:focus::before {
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(to bottom left, #4c63d2, #bc3081, #f47133, #fed576);
-    z-index: 3;
+    z-index: 3 !important;
 }
 
 /* เมื่อ hover ให้ค่อยๆลบพื้นหลังปัจจุบันและจะเห็นพื้นกลังไล่สีข้างหลัง */
@@ -1115,7 +1145,7 @@ button:focus::before {
 
 
 .social-link ul li:nth-child(n+2):nth-child(-n+3) a::before{
-    content: "PedDev";
+    content: "mix_wdev";
     background-color: #737478;
     padding: 0 1rem;
     border-radius: 15px;
