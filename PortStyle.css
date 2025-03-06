@@ -1012,7 +1012,7 @@ button:focus::before {
     position: absolute;
     top: -50px;
     left: 50%;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     background-color: #1877F2;
     border: 8px solid #fff;
     border-radius: 50%;
