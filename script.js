@@ -71,4 +71,22 @@ function w3RemoveClass(element, name) {
 
 
 
+// ----------
+function copyToClipboard(event, element) {
+  event.preventDefault(); // ป้องกันการเปิดลิงก์
 
+  const text = element.innerText || element.textContent; // ดึงข้อความจาก <a>
+  const textarea = document.createElement("textarea");
+
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+
+  // alert("คัดลอกแล้ว: " + text); // แจ้งเตือนผู้ใช้
+}
+
+function contact() {
+  window.location.href = 'https://www.facebook.com/teerapat.suksamang';
+}
