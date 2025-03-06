@@ -36,7 +36,7 @@
         <div class="container navbar-content">
 
             <!-- Logo -->
-            <a href="Index.html" class="navbar-brand ">
+            <a href="index.html" class="navbar-brand ">
                 Teerapat 
             </a>
             
@@ -85,26 +85,28 @@
             <div class="banner-text">
                 <h4>Hi</h4>
                 <h1>I'm Teerapat Suksamang</h1>
-                <h3>A Freelance Front-end Developer</h3>
-                <button class="btn-contact ">Contact Us</button>
+                <h3>A Freelance Full-Stack Web Developer</h3>
+                <button class="btn-contact" onclick="contact();">Contact Me</button>
             </div>
 
             <!-- วงกลม overlay -->
             <div class="dark-overlay-cir">
-                <img src="My.png" alt="" class="banner-me">
+                <div class="banner-me">
+                    <img src="img/me_2.png" alt="" class="img">
+                </div>
                 <div class="follow-btn">
-                    <button class="facebook-btn">
+                    <a href="https://www.facebook.com/teerapat.suksamang" target="_blank" class="facebook-btn">
                         <img src="icon/FB.png" alt="" class="icon">
-                    </button>
-                    <button class="tiktok-btn">
+                    </a>
+                    <!-- <a href="" target="_blank" class="tiktok-btn">
                         <img src="icon/TK.png" alt="" class="icon">
-                    </button>
-                    <button class="ig-btn">
+                    </a> -->
+                    <a href="https://www.instagram.com/mix_wdev" target="_blank" class="ig-btn">
                         <img src="icon/IG.png" alt="" class="icon">
-                    </button>
-                    <button class="github-btn">
+                    </a>
+                    <a href="https://github.com/TeerapatSuksamang/" target="_blank" class="github-btn">
                         <img src="icon/GT.png" alt="" class="icon">
-                    </button>
+                    </a>
                 </div>
 
             </div>
@@ -120,7 +122,7 @@
                         <div class="col-lg-9  pb-5">
                             <div class="row">
                                 <div class="col-md-4 mb-5 about-me-img">
-                                    <img src="My.png" alt="">
+                                    <img src="img/me_3.jpg" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <h1 class="section-title">About Me</h1>
@@ -328,38 +330,40 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <div class="profile"></div>
+            <div class="profile">
+                <img src="img/me_2.png" alt="" class="img">
+            </div>
             
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-4 col-sm-6 contact-link">
-                            <h2>Contact Us</h2>
+                            <h2>Contact Me</h2>
                             <ul>
-                                <li><a href="#"><i class="fa-solid fa-envelope"></i> nongmix2550@gmail.com</a></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook-messenger"></i> teerapat suksam-ang</a>
+                                <li><a href="" onclick="copyToClipboard(event, this)"><i class="fa-solid fa-envelope"></i> nongmix2550@gmail.com</a></li>
+                                <li><a href="" onclick="copyToClipboard(event, this)"><i class="fa-brands fa-facebook-messenger"></i> teerapat suksam-ang</a>
                                 </li>
-                                <li><a href="#"><i class="fa-brands fa-line"></i> 063-850-950</a></li>
-                                <li><a href="#"><i class="fa-solid fa-phone"></i> 063-850-950</a></li>
+                                <li><a href="" onclick="copyToClipboard(event, this)"><i class="fa-brands fa-line"></i> 063-850-950</a></li>
+                                <li><a href="" onclick="copyToClipboard(event, this)"><i class="fa-solid fa-phone"></i> 063-850-950</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6 social-link">
-                            <h2>Follow Us</h2>
+                            <h2>Follow Me</h2>
                             <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/teerapat.suksamang" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                                 <li class="ig-gradient ">
-                                    <a href="#">
+                                    <a href="https://www.instagram.com/mix_wdev" target="_blank">
                                         <i class="fa-brands fa-instagram "></i>
                                     </a>
                                 </li>
-                                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                                <!-- <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li> -->
                             </ul>
                         </div>
                         <div class="col-md-4 support-link">
                             <h2>Support Me</h2>
                             <ul>
-                                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>My Shop</a></li>
-                                <li><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate</a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i>My Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate</a></li>
                             </ul>
                         </div>
                     </div>
