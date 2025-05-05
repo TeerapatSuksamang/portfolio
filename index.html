@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-sm sticky-top">
@@ -289,7 +290,7 @@
                         <button type="submit">Send message <i class="fa-solid fa-paper-plane"></i></button>
 
                         <div class="g-recaptcha mt-3 mx-auto" 
-                            data-sitekey="6LeXyS0rAAAAAH8orkcviVYGemDq_DEv92FwGVuX"
+                            data-sitekey="6LdzqC4rAAAAAAHCnUx3Tsm2cZU3ceoZLRiWUTlK"
                             data-callback='onSubmit' 
                             data-action='submit'></div>
                     </form>
@@ -372,10 +373,16 @@
 
     <script src="script.js"></script>
     
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
     <script>
+        window.onload = function() { 
+            var el = document.getElementById('g-recaptcha-response'); 
+            if (el) { 
+                el.setAttribute('required', 'required'); 
+            } 
+        }
         function onSubmit(token) {
           document.getElementById("demo-form").submit();
         }
