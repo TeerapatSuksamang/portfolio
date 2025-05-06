@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
     height: 1px;
     width: 95%;
     background-color: white;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
 }
 
 .navbar h2.brand{
@@ -80,8 +80,9 @@ body::-webkit-scrollbar-thumb {
     transition: all .5s;
 }
 
+.navbar a.active-link,
 .navbar h2.brand:hover,
-.navbar a:hover{
+.navbar a:hover {
     color: white;
     text-shadow: 0 0 5px white;
 }
@@ -97,6 +98,7 @@ body::-webkit-scrollbar-thumb {
     transition: .5s;
 }
 
+.navbar a.active-link::after,
 .navbar a:hover::after {
     width: 100%;
     left: 0;
@@ -249,11 +251,10 @@ h2.brand, #introduce *, .section-text, #about h1 {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(img/space.svg) top center;
-    transform: translateZ(-5px) scale(8);
+    background: url(img/space.svg) bottom center;
+    transform: translateZ(-5px) scale(10);
     rotate: 180deg;
     background-size: cover;
-    background-position: center center;
     will-change: transform;
 }
 
@@ -634,7 +635,7 @@ h2.brand, #introduce *, .section-text, #about h1 {
 
 .project-img {
     width: 100%;
-    height: 45%;
+    height: 12rem;
     overflow: hidden;
     position: relative;
     /* display: flex;
@@ -869,7 +870,7 @@ h2.brand, #introduce *, .section-text, #about h1 {
     left: 50%;
     background-size: cover;
     background-position: bottom center;
-    transform: translateZ(-8px) scale(45);
+    transform: translateZ(-8px) scale(30);
 }
 
 .forest-parallax .layer{
@@ -907,7 +908,7 @@ h2.brand, #introduce *, .section-text, #about h1 {
 }
 #contact form {
     border: 1px solid white;
-    padding: 1.5rem .8rem;
+    padding: 1.5rem 1rem;
     border-radius: 10px;
     display: grid;
     /* gap: 1rem; */
@@ -971,10 +972,56 @@ h2.brand, #introduce *, .section-text, #about h1 {
 
 .camp-fire {
     position: absolute;
-    bottom: -50px;
+    bottom: -45px;
+    right: -15px;
     z-index: -5;
-    right: 0;
+    width: 240px;
+    height: 240px
     /* border: 1px solid white; */
+}
+.camp-fire img {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 50px;
+    /* border: 1px solid white; */
+    z-index: -1;
+    animation: alien-move 15s linear infinite ;
+}
+
+@keyframes alien-move {
+    0% {
+        transform: translateY(0);
+    }
+    5% {
+        transform: translateY(-40px);
+    }
+    10% {
+        transform: translateY(-40px);
+    }
+    15% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateX(50px) rotate(30deg);
+    }
+    55% {
+        transform: translateX(50px) rotate(30deg);
+    }
+    65% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.dotlottie-player {
+    position: relative;
 }
 
 /* รายการลิงก์ */
@@ -1006,7 +1053,13 @@ h2.brand, #introduce *, .section-text, #about h1 {
 .contact-list li:hover i,
 .social-list li:hover i {
   transform: scale(1.2);
+} 
+
+.contact-list svg {
+    width: 1.2rem;
+    aspect-ratio: 1/1;
 }
+
 
 /* ลิงก์ */
 .contact-list a,
@@ -1022,8 +1075,6 @@ h2.brand, #introduce *, .section-text, #about h1 {
   transform: translateX(1px);
   /* text-shadow: 0 0 8px #cb78d5; */
 }
-
-
 
 /* ------- Footer ------- */
 .footer {
@@ -1044,3 +1095,19 @@ h2.brand, #introduce *, .section-text, #about h1 {
     color: #fff;
 }
 
+/* ------------- */
+.el-fade-up {
+    opacity: 0;
+    animation: el-fade-up 1.5s forwards 2s;
+}
+
+@keyframes el-fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
