@@ -271,20 +271,21 @@ h2.brand, #introduce *, .section-text, #about h1 {
 #introduce .text h3 { font-size: clamp(1.4rem, 2.9vw, 2.2rem); }
 
 #introduce .text a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 3.5px;
     text-decoration: none;
     background-color: black;
     width: fit-content;
     border: 1px solid white;
     border-radius: 6px;
     text-shadow: 0 0 5px white;
-    padding: .5rem 1rem;
+    padding: .5rem 1.2rem;
     margin: 1.2rem auto;
     display: block;
     transition: all .5s;
 }
 
-#introduce .text a:hover{
+#introduce .text a:hover {
     box-shadow: 0 0 7px white;
     background-color: white;
     color: black;
@@ -433,6 +434,7 @@ h2.brand, #introduce *, .section-text, #about h1 {
 
 #about p {
     max-width: 28rem;
+    font-size: 1.1rem;
 }
 
 /* ------- Skill ------- */
