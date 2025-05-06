@@ -15,7 +15,7 @@
 }
 
 
-#loader.fade-out {
+.loader-fade-out {
     opacity: 0;
     pointer-events: none;
 }

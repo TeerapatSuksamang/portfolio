@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Preloader
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
-    const main = document.getElementById("main-content");
+    // const main = document.getElementById("main-content");
 
     // loader.style.display = "none";
     // main.style.display = "block";
-    loader.classList.add("fade-out");
-    main.classList.add("fade-in");
+    loader.classList.add("loader-fade-out");
+    // main.classList.add("fade-in");
 }); 
